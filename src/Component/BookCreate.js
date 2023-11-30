@@ -14,18 +14,20 @@ const BookCreate = ({ createBook }) => {
     };
 
     return (
-        <>
-            <h2>BookCreate</h2>
+        <div className="book-create">
+            <h3>Add a book</h3>
             <form onSubmit={handelSubmit}>
-                <div>
-                    <span>Title: </span>
-                    <input name="title" value={title} onChange={handelInput}></input>
-                </div>
-                <div>
-                    <button type="submit">Save</button>
-                </div>
+                <span>Title: </span>
+                <input
+                    className="input"
+                    name="title"
+                    value={title}
+                    onChange={handelInput}></input>
+                <button className="button" type="submit">
+                    Save
+                </button>
             </form>
-        </>
+        </div>
     );
 };
 

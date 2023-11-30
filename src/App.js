@@ -12,8 +12,8 @@ const App = () => {
 
     return (
         <div>
-            <BookList books={books} />
             <BookCreate createBook={createBook} />
+            <BookList books={books} />
         </div>
     );
 };
