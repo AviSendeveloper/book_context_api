@@ -1,15 +1,20 @@
 import BookShow from "./BookShow";
 
-const BookList = ({ books }) => {
+const BookList = ({ books, onDelete, onEdit }) => {
     return (
-        <>
-            <h2>Book List</h2>
+        <div className="book-list">
             {books.map((book) => {
                 return (
-                    <BookShow title={book.title} id={book.id} key={book.id} />
+                    <BookShow
+                        title={book.title}
+                        id={book.id}
+                        key={book.id}
+                        onDelete={onDelete}
+                        onEdit={onEdit}
+                    />
                 );
             })}
-        </>
+        </div>
     );
 };
 
