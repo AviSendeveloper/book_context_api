@@ -1,3 +1,19 @@
+# json-server
+
+install json-server pacjage
+
+```js
+npm i --save json-server
+```
+
+create db.json in root folder
+
+add line in scripts object in package.json
+
+```js
+"server": "json-server -p 3001 --watch db.json"
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
