@@ -1,8 +1,29 @@
-const BookEdit = () => {
+import { useState } from "react";
+
+const BookEdit = ({ oldTitle, onEdit }) => {
+    const [editedTitle, setEditedTitle] = useState(oldTitle);
+
+    const handelInput = (event) => {
+        setEditedTitle(event.target.value);
+    };
+
+    const handelEditSave = () => {
+        onEdit(editedTitle);
+        setEditedTitle("");
+    };
+
     return (
-        <>
-            <h3>BookEdit</h3>
-        </>
+        <div className="book-edit">
+            <input
+                className="book-edit"
+                name="title"
+                value={editedTitle}
+                onChange={handelInput}
+            ></input>
+            <button className="button" onClick={handelEditSave}>
+                Save
+            </button>
+        </div>
     );
 };
 
