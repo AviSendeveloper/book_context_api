@@ -18,8 +18,7 @@ const BookEdit = ({ oldTitle, onEdit }) => {
                 className="book-edit"
                 name="title"
                 value={editedTitle}
-                onChange={handelInput}
-            ></input>
+                onChange={handelInput}></input>
             <button className="button" onClick={handelEditSave}>
                 Save
             </button>
